@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xmlns="http://jboss.org/kie/6.0.0/kmodule">
+  <kbase name="basic" default="true" packages="rules.basic">
+    <ksession name="rules.basic" type="stateful"/>
+  </kbase>
+  <kbase name="wmModificationKbase" packages="rules.workingMemoryModif">
+    <ksession name="wmModificationKsession"/>
+  </kbase>
+
+  <kbase name="ruleAttributesKbase" packages="rules.ruleAttributes">
+    <ksession name="ruleAttributesKsession"/>
+  </kbase>
+  
+  <kbase name="ruleGroupingKbase" packages="rules.ruleGrouping">
+    <ksession name="ruleGroupingKsession"/>
+  </kbase>
+
+  <kbase name="timerCalendarKbase" packages="rules.timersAndCalendars">
+    <ksession name="timerCalendarKsession"/>
+  </kbase>
+
+  <kbase name="loopingExamplesKbase" packages="rules.loops">
+    <ksession name="loopingExamplesKsession"/>
+  </kbase>
+
+  <kbase name="declaredTypesKbase" packages="rules.declaredTypes">
+    <ksession name="declaredTypesKsession"/>
+  </kbase>
+  
+  <kbase name="propertyReactiveKbase" packages="rules.propertyReactive">
+    <ksession name="propertyReactiveKsession"/>
+  </kbase>
+ 
+  <kbase name="collectKbase" packages="rules.collectRules">
+    <ksession name="collectKsession"/>
+  </kbase>
+  
+  <kbase name="accumulateKbase" packages="rules.accumRules">
+    <ksession name="accumKsession"/>
+  </kbase>
+
+  <kbase name="condElemsKbase" packages="rules.conditionalElements">
+    <ksession name="condElemsKsession"/>
+  </kbase>
+
+  <kbase name="traitsKbase" packages="rules.traits">
+    <ksession name="traitsKsession"/>
+  </kbase>
+
+  <kbase name="ruleExceptionsKbase" equalsBehavior="equality" packages="rules.ruleExceptions">
+    <ksession name="ruleExceptionsKsession" beliefSystem="defeasible"/>
+  </kbase>
+</kmodule>

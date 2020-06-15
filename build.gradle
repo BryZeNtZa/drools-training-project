@@ -1,0 +1,29 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+version = '1.0.0'
+
+ext {
+	slf4jVersion 		= '1.7.21'
+    junitVersion 		= '4.12'
+    droolsVersion		= '7.33.0.Final'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile(
+		[group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion],
+        [group: 'org.kie', name: 'kie-api', version: droolsVersion],
+        [group: 'org.drools', name: 'drools-compiler', version: droolsVersion],
+        [group: 'org.drools', name: 'drools-core', version: droolsVersion],
+    )
+	testCompile(
+        [group: 'junit', name: 'junit', version: junitVersion],
+        [group: 'org.kie', name: 'kie-api', version: droolsVersion],
+        [group: 'org.drools', name: 'drools-compiler', version: droolsVersion],
+        [group: 'org.drools', name: 'drools-core', version: droolsVersion],
+    )
+}
